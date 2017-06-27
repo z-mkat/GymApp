@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using GymApp.Views;
-using GymApp.VModel;
 using SQLite;
 using Xamarin.Forms;
 

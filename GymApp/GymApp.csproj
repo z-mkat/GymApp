@@ -63,8 +63,6 @@
     <Compile Include="Views\WorkoutEntryPage.xaml.cs">
       <DependentUpon>WorkoutEntryPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="VModel\MainViewModel.cs" />
-    <Compile Include="VModel\BaseViewModel.cs" />
     <Compile Include="Services\NewsService.cs" />
     <Compile Include="Model\News.cs" />
     <Compile Include="Views\ArticlePage.xaml.cs">
@@ -113,7 +111,6 @@
     <Folder Include="Model\" />
     <Folder Include="Persistance\" />
     <Folder Include="Views\" />
-    <Folder Include="VModel\" />
     <Folder Include="Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
