@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	NavigationPage.HasNavigationBar="false"
+	xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:local="clr-namespace:GymApp;assembly=GymApp" 
+	x:Class="GymApp.HomePage">
+
+	<ListView x:Name="newsListView" ItemSelected="OnItemSelected" VerticalOptions="FillAndExpand" SeparatorVisibility="Default" HasUnevenRows="true">
+		<ListView.ItemTemplate>
+			<DataTemplate>
+				<ViewCell>
+					<StackLayout Orientation="Vertical" Padding="5,10">
+							<AbsoluteLayout BackgroundColor="#dcdfe2"  Padding="4, 10, 4, 10">
+								<BoxView AbsoluteLayout.LayoutBounds="0.25, 0.25, 0.5, 0.5" AbsoluteLayout.LayoutFlags="All"/>
+						 		<Image Source="{Binding fields.thumbnail}" Aspect="AspectFill"	
+							 		AbsoluteLayout.LayoutBounds="0, 0, 1, 0.7" AbsoluteLayout.LayoutFlags="All"/>
+							 		
+							 		<StackLayout
+							 			HorizontalOptions="FillAndExpand"
+							 			Orientation="Vertical"							 			
+							 			Padding="4"
+							 			AbsoluteLayout.LayoutBounds="0, 1, 1, AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional">
+							 			<Label Text="{Binding webTitle}" FontSize="15" VerticalOptions="Start" TextColor="#3a5169"/>
+										<Label Text="{Binding sectionName}" FontSize="13" TextColor="#23658c" VerticalOptions="EndAndExpand"/>
+							 		</StackLayout>								
+							</AbsoluteLayout>							
+					</StackLayout>
+				</ViewCell>						
+			</DataTemplate>
+		</ListView.ItemTemplate>
+	</ListView>
+</ContentPage>
+

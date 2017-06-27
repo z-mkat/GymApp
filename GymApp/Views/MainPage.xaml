@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TabbedPage
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:local="clr-namespace:GymApp;assembly=GymApp"
+	xmlns:localC="clr-namespace:GymApp.Views;assembly=GymApp"
+	x:Class="GymApp.MainPage"
+	Title="Workout Diary App"
+	>
+	<NavigationPage Title="Home" Icon="home.png">
+		<x:Arguments>
+			<local:HomePage />
+		</x:Arguments>
+	</NavigationPage>
+	
+
+	<ContentPage Title="Enter Workout" Icon="weight.png" >
+		<ContentPage.ToolbarItems>
+			<ToolbarItem Icon="plus.png" Activated="OnAddProfileAsync" Order="Primary" />
+		</ContentPage.ToolbarItems>
+		
+		<ListView x:Name="profileListView"
+			HasUnevenRows="true"
+			SelectedItem="{Binding SelectedPlaylist, Mode=TwoWay}"
+			ItemsSource="{Binding Profiles}"
+			ItemSelected="OnRecordSelected">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell> 
+					<StackLayout Padding="5">					
+						<StackLayout Orientation="Horizontal" >
+							<Label Text="{Binding SelectedWorkout}" TextColor="#0b80c4" HorizontalOptions="FillAndExpand"/>
+							<Label Text="Reps" />
+							<Label Text="{Binding NumberOfReps}" />
+							<Label Text="Sets"/>
+							<Label Text="{Binding NumberOfSets}"/>
+						</StackLayout>
+						<StackLayout>
+							<Label Text="{Binding DatetimeDetail}" FontSize="13"/>					
+						</StackLayout>
+					</StackLayout>
+						<ViewCell.ContextActions>
+							<MenuItem Text="Delete" Clicked="OnDeleteAction" IsDestructive="true" CommandParameter="{Binding .}" />
+						</ViewCell.ContextActions>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+	</ContentPage>
+</TabbedPage>
+
+

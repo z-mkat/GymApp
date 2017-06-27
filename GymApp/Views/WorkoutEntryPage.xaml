@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="GymApp.Views.WorkoutEntryPage">
+	<StackLayout>
+			<TableView>
+			<TableRoot>
+				<TableSection>
+					<ViewCell Tapped="Handle_Tapped">
+						<StackLayout  Orientation="Horizontal" Padding="13,5" >
+								<Label Text="Select Exercise" VerticalOptions="Center"/>
+								<Label x:Name="exerciseSelection" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Text="{Binding SelectedWorkout}"/>
+						</StackLayout>
+					</ViewCell>
+						<EntryCell Text="{Binding NumberOfSets}" Label="Sets" Placeholder="(eg 3)" Keyboard="Numeric"/>
+						<EntryCell Text="{Binding NumberOfReps}" Label="Reps" Placeholder="(eg 12)" Keyboard="Numeric"/>
+						<EntryCell Text="{Binding MaxWeight}" Label="Max Weight" Placeholder="(eg 25kg)" Keyboard="Numeric"/>
+				</TableSection>
+				<TableSection>
+					<ViewCell>
+						<Button Text="Save" Clicked="OnSave" />
+					</ViewCell>	
+				</TableSection>
+			</TableRoot>
+		</TableView>
+	</StackLayout>
+</ContentPage>
