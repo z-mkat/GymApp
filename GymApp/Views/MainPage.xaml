@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TabbedPage
+	Padding="0, 20, 0, 0"
 	xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 	xmlns:local="clr-namespace:GymApp;assembly=GymApp"
 	xmlns:localC="clr-namespace:GymApp.Views;assembly=GymApp"
 	x:Class="GymApp.MainPage"
-	Title="Workout Diary App"
+	Title="Gym App"
 	>
 	<NavigationPage Title="Home" Icon="home.png">
 		<x:Arguments>

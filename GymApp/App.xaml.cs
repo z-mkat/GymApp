@@ -8,7 +8,10 @@ namespace GymApp
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new MainPage())
+            {
+                BarTextColor = Color.White
+            };
         }
 
         protected override void OnStart()

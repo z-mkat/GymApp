@@ -151,11 +151,18 @@
     <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\home%402x.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\weight%402x.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\home.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\weight.png" />
     <AndroidResource Include="Resources\drawable\plus.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\plus%402x.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\plus%403x.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\plus.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\plus.png" />
+    <AndroidResource Include="Resources\drawable\home.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\home.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\home.png" />
+    <AndroidResource Include="Resources\drawable\weight.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\weight.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\weight.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\plus.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Persistance\" />

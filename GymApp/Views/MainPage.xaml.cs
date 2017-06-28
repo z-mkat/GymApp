@@ -14,12 +14,21 @@ namespace GymApp
 
         public MainPage()
         {
+            //sets tabbed bar colour
             BarBackgroundColor = Color.FromHex("#003863");
+            //sets tabbed bar icon/text colour 
             BarTextColor = Color.White;
+
+
+
             InitializeComponent();
 
             _connection = DependencyService.Get<ISQLiteDb>().GetConnection();
         }
+
+
+
+
 
         protected override async void OnAppearing()
         {
