@@ -13,12 +13,11 @@ namespace GymApp.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            UINavigationBar.Appearance.BarTintColor = UIColor.FromRGB(0, 56, 99);
+            UIApplication.SharedApplication.SetStatusBarHidden(false, false);
+
 
             LoadApplication(new App());
-
-            UINavigationBar.Appearance.BarTintColor = UIColor.FromRGB(0, 56, 99);
-            UINavigationBar.Appearance.BarStyle = UIBarStyle.Black;
-            UINavigationBar.Appearance.TintColor = UIColor.White;
 
             return base.FinishedLaunching(app, options);
         }
